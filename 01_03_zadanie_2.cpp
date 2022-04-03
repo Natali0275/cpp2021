@@ -2,16 +2,25 @@
 using namespace std;
 
 int main ()
-{
-    int number;
-    FILE *test_file;
-    test_file = fopen("test", "r");
-    fscanf(test_file, "%d", &number);
-    printf ("A: %d \n", number);
-    fscanf(test_file, "%d", &number);
-    printf ("A: %d \n", number);
-    fscanf(test_file, "%d", &number);
-    printf ("A: %d \n", number);
-  fclose(test_file);
+{  int a,b,i,c,n;
+    cout << "a<b";
+    cin >> a >> b;
+    FILE *chisla_file;
+    chisla_file = fopen("chisla", "w");
+    for (i=a; i<=b; i++ )
+    {
+        c=i*3;
+        fprintf(chisla_file, "%d \n", c);
+    }
+  fclose(chisla_file);
+    
+
+ chisla_file = fopen("chisla", "r");
+ for (n=1; n<=b-a+1; n++) {
+    fscanf(chisla_file, "%d", &c);
+    cout << n << ":";
+    printf ( "%d \n", c);
+ }
+  fclose(chisla_file);
   return 0;
 }
