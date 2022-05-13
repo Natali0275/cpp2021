@@ -7,16 +7,17 @@ double SquaredSum (double a, double b);
 
 int main()
 { 
- SquaredSum (10.9,3.3);
- SquaredSum (12.7,6.9);
+
+ cout << SquaredSum(12, 6) <<"\n";
+ cout << SquaredSum(9, 15) <<"\n";
    
-    return 0;
+ return 0;
 }
 
 double SquaredSum (double a, double b){
-    double c;
-    c=(a+b)*(a+b);
-    cout << " c = " << c << " \n";
+ double c;
+ c=(a+b)*(a+b);
+ 
     
-    return 0;
+ return c;
 }
