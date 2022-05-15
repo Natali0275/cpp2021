@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void print (int a);
+void print (float a);
+void print (char a);
+void print (int a, int b);
+
+int main()
+{
+print (10);
+print (1435161632);
+print ('a');
+print (10,52);
+
+return 0;
+}
+
+void print (int a){
+cout << a << "\n";
+}
+void print (float a){
+cout << a << "\n";
+}
+void print (char a){
+cout << a << "\n";
+}
+void print (int a, int b){
+cout << a << ", " << b << "\n";
+}
