@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+class Bucket {
+    public: 
+    int volume  = 12; 
+    int used = 6;
+    
+    int flush (){
+       return used = used-used;
+    };
+    int fill (int v){
+            int c = volume - used;
+            if (c > v){
+                used = used + v;
+                return 0;
+            } else {
+                
+                used = used + v -(v-c);
+                return v - c;
+            }
+    }
+};
+
+
+int main()
+{ 
+Bucket D;
+    cout << "1) " << D.volume << ", " << D.used << "\n";
+
+    int rest = D.fill(7);
+    cout << "2) " << D.used << ", " << rest << "\n";
+    
+    D.flush();
+    rest = D.fill(8);
+    cout << "3) " << D.used << ", " << rest << "\n";
+   
+ return 0;
+}
