@@ -1,23 +1,20 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
-
-int reverse(char a){
-int n;
-
-for (int i=n; i<1; i--){
-    a [n-i]=a[i];
+int n,i;
+void reverse(char a[]){
+n = strlen(a);
+for (int i=1; i<=n; i++){
+    cout << a[n-i];
 }
-return 0;}
 
-
+}
 int main()
 { 
-int i;
-char a[i]={"Tercg"};
+char a[] ="Tecgyt";
+reverse (a);
 
-int n=i;
-cout << reverse(a[i]) <<"\n";
     
  return 0;
 }
