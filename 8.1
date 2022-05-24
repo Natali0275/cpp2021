@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+class CreditCard {
+    public:
+    int Namber;
+    float Balance;
+    
+    CreditCard(int a=1234, float b=50){
+    int Namber = a;
+    float Balance = b;
+    };
+    
+    int Put(float v){
+        float b = b + v;
+     return b; 
+    };
+    
+    int Take(float v){
+        float b = b - v;
+     return b;   
+    };
+};
+
+int main()
+{ 
+CreditCard firstCC(1234, 150), *ukaz;
+ukaz = &firstCC;
+cout << ukaz -> Put(400) << "рублей \n";
+
+
+cout << ukaz -> Take(170) << "рублей \n";
+
+return 0;
+}
