@@ -11,13 +11,14 @@ class CreditCard {
     float Balance = b;
     };
     
-    int Put(float v){
-     return Balance = Balance + v; 
+    float Put(float v) {
+      float  b;
+      return b = b + v;
     };
     
-    int Take(float v){
-       
-            return Balance = Balance - v;
+    float Take(float v) {
+        float b;
+    return b = b - v;
     };
 };
 
@@ -25,8 +26,8 @@ int main()
 { 
 CreditCard firstCC(1234, 50), *ukaz;
 ukaz = &firstCC;
-cout << ukaz -> Put(400) << "рублей \n";
-cout << ukaz -> Take(70) << "рублей \n";
+cout << ukaz->Put(400) << " рублей \n";
+cout << ukaz->Take(30.3) << " рублей \n";
 
 return 0;
 }
