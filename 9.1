@@ -3,37 +3,36 @@
 using namespace std;
 
 class Cmechenie {
-    char c;
-    char c1;
+    public:
+    string c;
     
-    Cmechenie operator++ (){
-        char c;
-    char *ukaz = c;
-    for (int i=0; i<=5; i++){
-        c = *(ukaz+i)+1;
-        cout << c << "\n";
-    };
+    Cmechenie (string c1){
+        c = c1;
+    }
+    
+Cmechenie operator++ (){
+    for (int i=0; i<=4; i++){
+        c[i] = c[i]+1;
+        cout << c[i] << "\n";
+    }
+    return c;
 }
-    Cmechenie operator-- (){
-        char c;
-    char *ukaz = c;
+Cmechenie operator-- (){
     char c1;
-    for (int i=0; i<=5; i++){
-        c1 = *(ukaz+i)-1;
-        cout << c1 << "\n";
-    };
-};
+    for (int i=0; i<=4; i++){
+        c[i] = c[i]-1;
+        cout << c[i] << "\n";
+    }
+    return c;
+}
 };
 
 int main()
 { 
     
-Cmechenie ;
-cout << c << "\n";
-c = c++;
-cout << c << "\n";
-c=c--;
-cout << c << "\n";
+Cmechenie c ("abc5");
+++ c;
+-- c;
 
 return 0;
 }
